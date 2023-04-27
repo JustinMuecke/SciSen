@@ -1,0 +1,6 @@
+runs
+wandb
+nonSciSciClass_trainer
+output*
+**/*.ipynb_checkpoints/
+
