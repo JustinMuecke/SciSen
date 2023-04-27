@@ -1,9 +1,8 @@
-# SciSen: Towards a Scientific Writing Feedback System
+# SciSen: Fine-Tuning Language Models for Scientific Writing Support
 
 ## About
 
-Writing scientific papers poses several challenges. It is often not clear how to write text using scientific vocabulary as opposed to
-colloquial language. Also, organising content into sections poses a challenge, as different information should be provided in different sections. We present SciSen, a system consisting of three components to support writers. Firstly, we propose a classifier trained on a corpus of scientific sentences extracted from peer reviewed scientific papers and non-scientific sentences collected from reddit, twitter, and science fiction books. The model gives researchers feedback if a written sentence is on the same scientific level as published papers. Secondly, we classify a sentence as to which section it belongs. We created a mapping of available section titles of published papers onto a standard paper layout. Given a sentence and its context, this model can classify to which section the sentence should belong. Finally, we propose a paraphraser that aims to enhance the scientific style of a sentence by providing suggestions for word replacements, additions to the sentence, and structural changes. Models are tested and evaluated on a dataset based on the Papers with Code database, containing 307.318 papers from differently ranked conferences. All three components achieve good levels of performance. We achieved a scientificness score to reliably evaluate if a sentence matches the linguistic level of published papers. Here, the baseline WideMLP outperformed the transformer. For the section classification, transformer models outperform the WideMLP baseline, with BERT achieving better results than SciBERT in most cases. While the paraphrasers’ make comparatively few alterations, they succeed in producing output sentences close to a gold standard. Large fine-tuned models perform best.
+We support scientific writers in determining whether a written sentence is scientific, to which section it belongs, and what paraphrasing could be done to improve a sentence. Firstly, we propose a regression model trained on a corpus of scientific sentences extracted from peer-reviewed scientific papers and non-scientific sentences collected from Reddit, Twitter, and science fiction books. The goal is to assign a score to a written sentence to indicate if it is on a similar scientific level as published papers. Secondly, we classify a sentence in the section in which it belongs. We create a mapping of section titles of published papers onto a standard paper layout. Given a sentence and different amounts of context, the goal is to classify to which section the sentence most likely belongs. Finally, we propose a paraphraser, which aims to improve the scientific style of a sentence by suggesting an alternative sentence that may include word substitutions, additions to the sentence, and structural changes. Our Models are trained and evaluated on a dataset based on the Papers with Code database, containing 307,318 papers from differently ranked conferences. All three components achieve good levels of performance. The scientificness score reliably evaluates whether a sentence matches the linguistic level of published papers. Here, the baseline WideMLP outperforms transformer models. For the section classification, transformer models outperform the WideMLP baseline, with BERT achieving better results than SciBERT in most cases. While the paraphrasing transformers make comparatively few alterations, they succeed in producing output sentences close to the gold standard. Large fine-tuned models such as T5 Large perform best in experiments considering various measures of difference between input sentence and gold standard.
 
 
 ## Contact
@@ -37,14 +36,5 @@ This Folder contains any preprocessing done to none scientifc sentences from dif
 ## [sciSen](/sciSen)
 
 Here, the acquisition of raw LaTeX files as well as the subsequent extraction and preprocessing of the scientific sentences can be found 
-
-
-## Project-Intern Resources
-
-### [MiroBoard](https://miro.com/app/board/uXjVPPtYGO8=/)
-### [Minutes_Notepad](https://newpad.stuve.uni-ulm.de/yPRbaLXbS6CtXm5df7_j5w#)
-### [Texfiles](https://cloudstore.uni-ulm.de/s/DJyRaGWpczwMq2k)
-### [ScientificParagraphsAndSentencesDataCollection](https://cloudstore.uni-ulm.de/s/LHat94HqyEt856b)
-### [NonScientificSentencesDataCollection](https://cloudstore.uni-ulm.de/s/YYqcpYqWQ5o8QYq)
 
 
